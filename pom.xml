@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.pe</groupId>
 	<artifactId>place-routes</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>place-routes</name>
 	<description>place-routes</description>
 	<url/>
@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>23</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
