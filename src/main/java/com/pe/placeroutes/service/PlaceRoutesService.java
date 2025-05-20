@@ -23,7 +23,7 @@ public class PlaceRoutesService implements IPlaceRoutesService {
     public Mono<PlaceRoutesResponse> getInformationRoute(PlaceRoutesRequest request) {
         Mono<PlaceRoutes> placeRoutes = placeRoutesRepository.findByOriginAndDestinationAndTransport(request.getOrigin(),
                 request.getDestination(), request.getTransport());
-        return placeRoutes.flatMap(placeRoute -> weatherClient.getWeather(placeRoute.getDestination())
+        return placeRoutes.flatMap(placeRoute -> weatherClient.getWeatherByCity(placeRoute.getDestination())
             .map(weatherResponse -> buildResponse(placeRoute, weatherResponse)));
     }
 
